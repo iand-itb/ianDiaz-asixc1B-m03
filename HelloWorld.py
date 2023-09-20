@@ -5,4 +5,3 @@ M03 UF1
 Exemple
 """
 print("Hello World")
-print("aalam")
