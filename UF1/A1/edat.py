@@ -16,6 +16,6 @@ try:
         print("Pa tu casa, a ver pocoyo")
 # Si el codi dins de "try: " falla, s'executa l'except i surt del programa amb codi "1" (error)s
 except Exception as e:
-    print("Introdueix una edat vàlida... Error: ")
+    print("\nIntrodueix una edat vàlida... Error: ")
     print(e)
     exit(1)
