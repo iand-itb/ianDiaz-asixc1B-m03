@@ -2,7 +2,7 @@
 Ian Diaz
 M03 UF1
 21/9/2023
-Exemple
+Programa per comprovar l'edat de l'usuari
 """
 
 # Definició de la variable edat proporcionada per l'usuari com a int
