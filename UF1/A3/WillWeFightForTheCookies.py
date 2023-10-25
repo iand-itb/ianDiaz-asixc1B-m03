@@ -1,13 +1,16 @@
 '''
 Ian Díaz
 M03 UF1
-Mostrar el numero de dias de un mes
+Mostrar si se pelea o se come las galletas
 25/10/2023
 '''
-
-uinput = input()
-cookiePeople = uinput.split(" ")
-if cookiePeople[0] != cookiePeople[1]:
-    print("Let's fight!")
-else:
-    print("Let's eat!")
+try:
+    uinput = input()
+    people = int(uinput.split(" ")[0])
+    cookies = int(uinput.split(" ")[1])
+    if cookies % people == 0:
+        print("Let's eat!")
+    else:
+        print("Let's fight!")
+except ValueError:
+    print("Incorrect values")
