@@ -1,6 +1,6 @@
 import random
 try:
-    CORRECTO = 0
+    CORRECTO = int(input("Introduce un número a adivinar entre el 1 y el 100: "))
     guess = random.randint(1, 100)
     top = 100
     bot = 1
@@ -13,6 +13,9 @@ try:
             bot = guess
         elif ask == "no":
             top = guess
+        else:
+            print("Responde a la pregunta con 'si' o 'no'")
+            break
         if CORRECTO == 1:
             guess = random.randint(bot, top -1)
         elif CORRECTO == 100:
