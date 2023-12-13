@@ -15,7 +15,10 @@ while True:
                 bot = guess
             elif ask == "no":
                 top = guess
-            guess = random.randint(bot + 1, top - 1)
+            if CORRECTO != 1 and CORRECTO != 100:
+                guess = random.randint(bot +1, top -1)
+            else:
+                guess = random.randint(bot, top)
             intentos +=1
         if guess == CORRECTO:
             print(f"He adivinado el número ({guess}), y me han sobrado {10 - intentos} intentos.")
@@ -26,5 +29,5 @@ while True:
             print("\nPor favor, introduce un valor numérico.")
             continue
         else:
-            print(e)
+        print(e)
     break
