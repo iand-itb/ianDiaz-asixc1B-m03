@@ -8,7 +8,7 @@ try:
     while CORRECTO < 1 or CORRECTO > 100:
         CORRECTO = int(input("Introduce un número a adivinar entre el 1 y el 100: "))
     while guess != CORRECTO and intentos < 10:
-        ask = input(f"Es más grande que {guess} ?\n")
+        ask = input(f"Es más grande que {guess} ?\n").lower()
         if ask == "si":
             bot = guess
         elif ask == "no":
