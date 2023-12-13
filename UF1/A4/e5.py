@@ -2,7 +2,7 @@ VOCALES = "aeiou"
 inp = 0
 
 while inp != " ":
-    inp = input("Introduce una vocal, para terminar introduce un espacio:\t").lower()
+    inp = input("Introduce una letra, para terminar introduce un espacio:\t").lower()
     if len(inp) > 1:
         pass
     else:
