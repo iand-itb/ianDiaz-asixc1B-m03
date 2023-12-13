@@ -20,10 +20,10 @@ while True:
         if guess == CORRECTO:
             print(f"He adivinado el número ({guess}), y me han sobrado {10 - intentos} intentos.")
         if intentos >= 10:
-            print("Te has quedado sin intentos")
+            print("\nMe he quedado sin intentos...")
     except Exception as e:
         if ValueError:
-            print("Por favor, introduce un valor numérico.")
+            print("\nPor favor, introduce un valor numérico.")
             continue
         else:
             print(e)
