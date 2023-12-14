@@ -6,7 +6,6 @@ Programa que llegeix nombre enter positiu i determina la quantitat de dígits qu
 try:
     digitos = 0
     num = input("Introduce un número entero: ")
-    isInt = int(num)
     if int(num) > 0:
         for digito in num:
             digitos +=1
