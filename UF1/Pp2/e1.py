@@ -7,7 +7,7 @@ try:
     digitos = 0
     num = input("Introduce un número entero: ")
     if int(num) > 0:
-        for digito in num:
+        for digito in int(num):
             digitos +=1
         print(f'El número "{num}" tiene {digitos} digitos.')
     else:
