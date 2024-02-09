@@ -5,10 +5,9 @@ ASIXc1B
 m03 UF2 ex. MatchAnalyzer
 '''
 
-teams = []
-team1, team2 = [], []
+teams = None
+team1, team2 = None, None
 points = []
-total = []
 transl = []
 loop = 0
 def get_teams():
@@ -68,9 +67,6 @@ def translate_points(points, currPoints, oldPoints):
         for point in currPoints:
             if point > 0:
                 transl.append(translations[point] + f' de {teams[currPoints.index(point)]}')
-            else:
-                pass
-
 
 def announces():
     for announce in transl:
@@ -83,7 +79,8 @@ try:
     get_teams()
     add_points()
     announces()
-except (TypeError, IndexError, ValueError):
+except Exception as e:
+    print(f'Error ocurred: {e}')
     if TypeError or ValueError:
         print("Introduce puntos numéricos válidos.")
     elif IndexError:
