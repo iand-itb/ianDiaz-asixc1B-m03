@@ -5,7 +5,7 @@ ASIXc1B
 m03 UF2 ex. MatchAnalyzer
 '''
 
-teams = None
+teams = []
 team1, team2 = None, None
 points = []
 transl = []
@@ -14,7 +14,7 @@ def get_teams():
     t = []
     global team1, team2
     while len(t) != 2:
-        t = input("Enter 2 teams: ").split(" ")
+        t = input("Introdueix els dos equips: ").split(" ")
         for team in t:
             teams.append(team.capitalize())
     team1, team2 = teams[0], teams[1]
@@ -82,6 +82,6 @@ try:
 except Exception as e:
     print(f'Error ocurred: {e}')
     if TypeError or ValueError:
-        print("Introduce puntos numéricos válidos.")
+        print("Introdueix valors numérics vàlids.")
     elif IndexError:
-        print("Introduce la cantidad correcta de valores.")
+        print("Introdueix la quantitat correcta de punts.")
