@@ -1,5 +1,5 @@
 teams = []
-team1, team2 = teams[0], teams[1]
+team1, team2 = [], []
 points = []
 total = []
 loop = 0
@@ -42,7 +42,7 @@ def add_points():
         loop += 1
 
 
-def translate_points()
+#def translate_points()
 
 
 get_teams()
