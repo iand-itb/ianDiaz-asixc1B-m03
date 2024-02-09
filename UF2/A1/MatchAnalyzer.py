@@ -1,17 +1,23 @@
+'''
+9/2/2024
+Ian Díaz Pérez
+ASIXc1B
+m03 UF2 ex. MatchAnalyzer
+'''
+
 teams = []
 team1, team2 = [], []
 points = []
 total = []
 transl = []
 loop = 0
-
 def get_teams():
     t = []
     global team1, team2
     while len(t) != 2:
         t = input("Enter 2 teams: ").split(" ")
         for team in t:
-            teams.append(team)
+            teams.append(team.capitalize())
     team1, team2 = teams[0], teams[1]
 
 
@@ -34,19 +40,16 @@ def add_points():
     currPoints = []
     while True:
         oldPoints = currPoints
-        currPoints = input(f'Puntos actuales de cada equipo ({teams[0]} {teams[1]}): ').split(" ")
+        currPoints = input(f'Puntos actuales de cada equipo ({team1} {team2}): ').split(" ")
         if '-1' in currPoints:
             break
         currPoints = [int(point) for point in currPoints]
         if validate_points(currPoints, oldPoints, loop):
             points.append(currPoints)
             translate_points(points, currPoints, oldPoints)
-            print(transl)
-            print(points)
             loop += 1
         else:
-            print("Puntos incorrectos")
-            print(points)
+            print("Puntos inválidos.")
             currPoints = oldPoints
 
 
@@ -69,17 +72,19 @@ def translate_points(points, currPoints, oldPoints):
                 pass
 
 
-def calculate_total(points):
-    totalT1, totalT2 = 0, 0
-    for i in range(len(points)):
-        for set in points:
-            totalT1 += set[0]
-            totalT2 += set[1]
-    total.append(totalT1)
-    total.append(totalT2)
-
-get_teams()
-add_points()
-calculate_total(points)
-print(teams)
-print(points)
+def announces():
+    for announce in transl:
+        print(announce)
+    if points[-1][0] > points[-1][1]:
+        print(f'Guanya {team1}.')
+    else:
+        print(f'Guanya {team2}')
+try:
+    get_teams()
+    add_points()
+    announces()
+except (TypeError, IndexError, ValueError):
+    if TypeError or ValueError:
+        print("Introduce puntos numéricos válidos.")
+    elif IndexError:
+        print("Introduce la cantidad correcta de valores.")
