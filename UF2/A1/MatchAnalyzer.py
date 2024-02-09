@@ -1,6 +1,8 @@
 teams = []
+team1, team2 = teams[0], teams[1]
 points = []
-
+total = []
+loop = 0
 
 def get_teams():
     t = []
@@ -10,23 +12,37 @@ def get_teams():
             teams.append(team)
 
 
+def validate_points(currPoints, oldPoints, loop):
+    if loop > 0:
+        set1, set2 = [currPoints[0], oldPoints[0]], [currPoints[1], oldPoints[1]]
+        if set1[0] < set1[1] or set2[0] < set2[1]:
+            return False
+        else:
+            return True
+    else:
+        return True
+
+
 def add_points():
+    global loop
     currPoints = []
     while True:
         oldPoints = currPoints
-        currPoints = input("Enter points for teams now (enter -1 to stop): ").split(" ")
+        currPoints = input(f'Puntos actuales de cada equipo ({teams[0]} {teams[1]}): ').split(" ")
         if '-1' in currPoints:
             break
         currPoints = [int(point) for point in currPoints]
-        for point in currPoints:
-            for oldpoint in oldPoints:
-                if oldpoint > point:
-                    break
-                else:
-                    if len(currPoints) != 2:
-                        print("Please enter points for both teams.")
-                    else:
-                        points.append(currPoints)
+        if validate_points(currPoints, oldPoints, loop):
+            points.append(currPoints)
+            print(points)
+        else:
+            print("Puntos incorrectos")
+            print(points)
+            currPoints = oldPoints
+        loop += 1
+
+
+def translate_points()
 
 
 get_teams()
