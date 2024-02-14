@@ -51,7 +51,7 @@ def add_points():
             print("Puntos inválidos.")
             currPoints = oldPoints
 
-def translate_points(points, currPoints, oldPoints):
+def translate_points(currPoints, oldPoints):
     translations = {
         1: 'Tir lliure',
         2: 'Cistella',
