@@ -5,19 +5,18 @@ ASIXc1B
 m03 UF2 ex. MatchAnalyzer
 '''
 
-teams = []
 team1, team2 = None, None
+teams = []
 points = []
 transl = []
 loop = 0
 def get_teams():
     t = []
     global team1, team2
-    while len(t) != 2:
-        t = input("Introdueix els dos equips: ").split(" ")
-        for team in t:
-            teams.append(team.capitalize())
-    team1, team2 = teams[0], teams[1]
+    team1 = input()
+    team2 = input()
+    teams.append(team1)
+    teams.append(team2)
 
 
 def validate_points(currPoints, oldPoints, loop):
@@ -42,7 +41,7 @@ def add_points():
     currPoints = []
     while True:
         oldPoints = currPoints
-        currPoints = input(f'Puntos actuales de cada equipo ({team1} {team2}): ').split(" ")
+        currPoints = input().split(" ")
         if '-1' in currPoints:
             break
         currPoints = [int(point) for point in currPoints]
@@ -77,6 +76,8 @@ def announces():
             print(announce)
         if points[-1][0] > points[-1][1]:
             print(f'Guanya {team1}.')
+        elif points[-1][0] == points[-1][1]:
+            print('Empat')
         else:
             print(f'Guanya {team2}')
 try:
@@ -89,3 +90,8 @@ except Exception as e:
         print("Introdueix valors numérics vàlids.")
     elif IndexError:
         print("Introdueix la quantitat correcta de punts.")
+
+
+
+
+
