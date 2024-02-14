@@ -21,17 +21,20 @@ def get_teams():
 
 
 def validate_points(currPoints, oldPoints, loop):
-    if loop > 0:
-        set1, set2 = [currPoints[0], oldPoints[0]], [currPoints[1], oldPoints[1]]
-        if set1[0] < set1[1] or set2[0] < set2[1] or set1[0] - set1[1] > 3 or set2[0] - set2[1] > 3:
-            return False
+    if len(currPoints) == 2:
+        if loop > 0:
+            set1, set2 = [currPoints[0], oldPoints[0]], [currPoints[1], oldPoints[1]]
+            if set1[0] < set1[1] or set2[0] < set2[1] or set1[0] - set1[1] > 3 or set2[0] - set2[1] > 3:
+                return False
+            else:
+                return True
         else:
-            return True
+            if currPoints[0] > 3 or currPoints[1] > 3:
+                return False
+            else:
+                return True
     else:
-        if currPoints[0] > 3 or currPoints[1] > 3:
-            return False
-        else:
-            return True
+        return False
 
 
 def add_points():
@@ -50,7 +53,6 @@ def add_points():
         else:
             print("Puntos inválidos.")
             currPoints = oldPoints
-
 
 def translate_points(points, currPoints, oldPoints):
     translations = {
