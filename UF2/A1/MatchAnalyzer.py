@@ -71,12 +71,14 @@ def translate_points(points, currPoints, oldPoints):
                 transl.append(translations[point] + f' de {teams[currPoints.index(point)]}')
 
 def announces():
-    for announce in transl:
-        print(announce)
-    if points[-1][0] > points[-1][1]:
-        print(f'Guanya {team1}.')
-    else:
-        print(f'Guanya {team2}')
+    global loop
+    if loop > 0:
+        for announce in transl:
+            print(announce)
+        if points[-1][0] > points[-1][1]:
+            print(f'Guanya {team1}.')
+        else:
+            print(f'Guanya {team2}')
 try:
     get_teams()
     add_points()
