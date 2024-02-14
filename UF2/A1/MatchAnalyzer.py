@@ -11,10 +11,8 @@ points = []
 transl = []
 loop = 0
 def get_teams():
-    t = []
     global team1, team2
-    team1 = input()
-    team2 = input()
+    team1, team2 = input(), input()
     teams.append(team1)
     teams.append(team2)
 
