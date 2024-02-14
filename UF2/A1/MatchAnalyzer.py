@@ -90,8 +90,3 @@ except Exception as e:
         print("Introdueix valors numérics vàlids.")
     elif IndexError:
         print("Introdueix la quantitat correcta de punts.")
-
-
-
-
-
