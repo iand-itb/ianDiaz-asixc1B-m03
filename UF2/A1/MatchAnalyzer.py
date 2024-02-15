@@ -45,7 +45,7 @@ def add_points():
         currPoints = [int(point) for point in currPoints]
         if validate_points(currPoints, oldPoints, loop):
             points.append(currPoints)
-            translate_points(points, currPoints, oldPoints)
+            translate_points(currPoints, oldPoints)
             loop += 1
         else:
             print("Puntos inválidos.")
