@@ -4,7 +4,7 @@ from unidecode import unidecode
 ALLOWED = string.ascii_letters
 
 def get_input():
-    text = input("Introduce texto a desordenar: ")
+    text = input("Introduce texto: ")
     return text
 def check_input(text, option):
     if option == "crazywords":
@@ -65,7 +65,7 @@ def palindrom(text):
                 cleanstr.replace(character, "")
     clean = list(unidecode(cleanstr))
     rev = clean[::-1]
-    if rev == cleanstr:
+    if rev == clean:
         result = f"{frase} es palíndromo"
     else:
         result = f"{frase} NO es palíndromo"
@@ -81,5 +81,5 @@ def caesarCipher():
             result += chr((ord(char) + shift - 65) % 26 + 65)
         if char.islower():
             result += chr((ord(char) + shift - 97) % 26 + 97)
-
-    return print(f"Texto encriptado: {result}")
+    print(f"Texto encriptado: ", end="")
+    return result
