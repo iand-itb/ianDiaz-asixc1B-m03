@@ -1,0 +1,54 @@
+2024-04-18 12:50:30,213 INFO Starting program.
+2024-04-18 12:50:31,254 ERROR : [Errno 13] Permission denied: '/home/matvei.karikh.7e6'
+2024-04-18 12:50:31,254 ERROR : [Errno 13] Permission denied: '/home/sjo'
+2024-04-18 12:50:31,254 ERROR : [Errno 13] Permission denied: '/home/david.munoz.7e7'
+2024-04-18 12:50:31,254 INFO Ending program, time elapsed: 1.041
+
+2024-04-18 12:50:34,097 INFO Starting program.
+2024-04-18 12:50:35,099 ERROR : [Errno 13] Permission denied: '/home/matvei.karikh.7e6'
+2024-04-18 12:50:35,099 ERROR : [Errno 13] Permission denied: '/home/sjo'
+2024-04-18 12:50:35,099 ERROR : [Errno 13] Permission denied: '/home/david.munoz.7e7'
+2024-04-18 12:50:35,099 INFO Ending program, time elapsed: 1.003
+
+2024-04-18 12:50:51,601 INFO Starting program.
+2024-04-18 12:50:52,593 ERROR : [Errno 13] Permission denied: '/home/matvei.karikh.7e6'
+2024-04-18 12:50:52,593 ERROR : [Errno 13] Permission denied: '/home/sjo'
+2024-04-18 12:50:52,594 ERROR : [Errno 13] Permission denied: '/home/david.munoz.7e7'
+2024-04-18 12:50:52,594 INFO Ending program, time elapsed: 0.993
+
+2024-04-18 12:50:53,892 INFO Starting program.
+2024-04-18 12:50:54,877 ERROR : [Errno 13] Permission denied: '/home/matvei.karikh.7e6'
+2024-04-18 12:50:54,877 ERROR : [Errno 13] Permission denied: '/home/sjo'
+2024-04-18 12:50:54,877 ERROR : [Errno 13] Permission denied: '/home/david.munoz.7e7'
+2024-04-18 12:50:54,877 INFO Ending program, time elapsed: 0.985
+
+2024-04-18 12:51:12,472 INFO Starting program.
+2024-04-18 12:51:12,472 ERROR : [Errno 13] Permission denied: '/media/root'
+2024-04-18 12:51:12,472 ERROR : [Errno 13] Permission denied: '/media/sjo'
+2024-04-18 12:51:12,615 ERROR : [Errno 13] Permission denied: '/lib/ssl/private'
+2024-04-18 12:51:13,487 ERROR : [Errno 13] Permission denied: '/sys/kernel/tracing'
+2024-04-18 12:51:13,557 ERROR : [Errno 13] Permission denied: '/sys/kernel/debug'
+2024-04-18 12:51:19,298 INFO Ending program due to SIGINT, time elapsed: 6.826
+
+2024-04-18 12:51:42,085 INFO Starting program.
+2024-04-18 12:51:42,085 ERROR : [Errno 13] Permission denied: '/media/root'
+2024-04-18 12:51:42,085 ERROR : [Errno 13] Permission denied: '/media/sjo'
+2024-04-18 12:51:42,227 ERROR : [Errno 13] Permission denied: '/lib/ssl/private'
+2024-04-18 12:51:43,170 ERROR : [Errno 13] Permission denied: '/sys/kernel/tracing'
+2024-04-18 12:51:43,241 ERROR : [Errno 13] Permission denied: '/sys/kernel/debug'
+2024-04-18 12:51:58,200 INFO Starting program.
+2024-04-18 12:51:58,201 ERROR : [Errno 13] Permission denied: '/media/root'
+2024-04-18 12:51:58,201 ERROR : [Errno 13] Permission denied: '/media/sjo'
+2024-04-18 12:51:58,347 ERROR : [Errno 13] Permission denied: '/lib/ssl/private'
+2024-04-18 12:51:59,223 ERROR : [Errno 13] Permission denied: '/sys/kernel/tracing'
+2024-04-18 12:51:59,293 ERROR : [Errno 13] Permission denied: '/sys/kernel/debug'
+2024-04-18 12:51:59,674 INFO Ending program due to SIGINT, time elapsed: 1.474
+
+2024-04-18 12:54:02,470 INFO Starting program.
+2024-04-18 12:54:02,470 ERROR : [Errno 13] Permission denied: '/media/root'
+2024-04-18 12:54:02,470 ERROR : [Errno 13] Permission denied: '/media/sjo'
+2024-04-18 12:54:02,610 ERROR : [Errno 13] Permission denied: '/lib/ssl/private'
+2024-04-18 12:54:03,507 ERROR : [Errno 13] Permission denied: '/sys/kernel/tracing'
+2024-04-18 12:54:03,575 ERROR : [Errno 13] Permission denied: '/sys/kernel/debug'
+2024-04-18 12:54:05,978 INFO Ending program due to SIGINT, time elapsed: 3.509
+
