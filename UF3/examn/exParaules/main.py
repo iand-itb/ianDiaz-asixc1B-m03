@@ -23,7 +23,7 @@ def main():
         # TASK 2
         vowelspluswords = task2.countVowels(words)
         task2.writeVowelsPlusWord(vowelspluswords)
-        logger('info', f'Program finished, total time elapsed: {timeElapsed():.5f}')
+        logger('info', f'Program finished, total time elapsed: {timeElapsed():.5f}\n')
     except Exception as e:
         print(e)
 main()

@@ -15,7 +15,8 @@ def clearFiles():
             if os.path.exists(os.path.join('.', file)):
                 cleared.append(file)
                 os.remove(os.path.join('.', file))
-        logger('warning', f'Output files ({str(cleared)}) cleared before continuing')
+        if len(cleared) > 0:
+            logger('warning', f'Output files ({str(cleared)}) cleared before continuing')
     except Exception as e:
         logger('error', f'Failed to clear output files: {e}')
 def saveWord(words):
